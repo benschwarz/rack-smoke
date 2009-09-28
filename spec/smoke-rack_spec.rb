@@ -29,6 +29,11 @@ describe "SmokeRack" do
           get "/smoke/github.#{format}"
           last_response.should be_ok
         end
+        
+        it "should serve using the correct content_type" do
+          get "/smoke/github.#{format}"
+          last_response.content_type.should include(format)
+        end
       end
     end
   end
