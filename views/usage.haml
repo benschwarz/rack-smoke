@@ -1,0 +1,9 @@
+%header
+  %a.back{:href => "/smoke"} &laquo; Back to docs
+  %h1= @source
+  %h2 Try these neat examples in your console
+
+- %w(json yaml xml).each do |format|
+  %h2= "In #{format.upcase}"
+  %pre
+    %code= "curl -i http://#{env["HTTP_HOST"]}/smoke/#{@source}.#{format}"

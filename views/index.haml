@@ -1,0 +1,18 @@
+%header
+  %h1 smoke-rack
+  %h2 Put more smoke in the air than the chinese at new years
+
+%p Smoke::Rack allows you to expose Smoke sources and transcode them into JSON, XML or YAML.  
+
+%section#sources
+  - if @sources.empty?
+    %p 
+    You don't have any sources specified yet, maybe checkout the 
+    %a{:href => "http://github.com/benschwarz/smoke"} Smoke readme
+    to get started
+  - else
+    %ul
+      - @sources.each do |source|
+        %li
+          %a{:href => "/smoke/#{source}"}= source
+  %h2
