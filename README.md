@@ -1,8 +1,14 @@
-= smoke-rack
+# smoke-rack
 
-Description goes here.
+Smoke::Rack allows you to expose Smoke sources and transcode them into JSON, XML or YAML.
 
-== Note on Patches/Pull Requests
+## What are the benefits? 
+
+* Pluggable caching, cache remote web services and rely on your own infrastructure
+* Join Smoke sources together, reinterpret them, then offer them as a simple web service 
+
+
+## Note on Patches/Pull Requests
  
 * Fork the project.
 * Make your feature addition or bug fix.
@@ -13,6 +19,6 @@ Description goes here.
    bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
-== Copyright
+## Copyright
 
 Copyright (c) 2009 Ben Schwarz. See LICENSE for details.
