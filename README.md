@@ -7,6 +7,18 @@ Smoke::Rack allows you to expose Smoke sources and transcode them into JSON, XML
 * Pluggable caching, cache remote web services and rely on your own infrastructure
 * Join Smoke sources together, reinterpret them, then offer them as a simple web service 
 
+Smoke::Rack gives you a bunch of HTML screens (found at `/smoke`) that outline the Smoke sources that are found within your current environment.
+![Smoke-rack home screen](http://farm3.static.flickr.com/2627/3964835379_5d245a98e2.jpg)
+
+From there, you'll be able to see the formats that you can get the stream in, or if they require any additional query strings.
+![Twitter source details](http://farm3.static.flickr.com/2566/3964835179_f543c25681.jpg)
+
+
+## Smoke? 
+
+Smoke allows you to take single serve sources from around the web. Then it does a bunch of smart stuff like automagically transferring as gzip, request caching and understands the content that it gets back. YQL, Atom / RSS feeds, json and xml are all converted to ruby arrays.
+
+Smoke-rack allows you to transcode that information and provide an API like layer of your own.
 
 ## Note on Patches/Pull Requests
  
