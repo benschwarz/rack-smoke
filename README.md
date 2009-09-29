@@ -20,6 +20,21 @@ Smoke allows you to take single serve sources from around the web. Then it does 
 
 Smoke-rack allows you to transcode that information and provide an API like layer of your own.
 
+
+## How do I include it in my project? 
+
+    # config.ru
+    require 'rubygems'
+    
+    # Ensure your app has some Smoke sources
+    require 'your-app'
+    
+    require 'smoke-rack'
+    use Smoke::Rack
+    
+    run Sinatra::Application
+
+
 ## Note on Patches/Pull Requests
  
 * Fork the project.
