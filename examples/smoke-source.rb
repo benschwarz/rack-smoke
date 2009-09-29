@@ -19,7 +19,9 @@ Smoke.yql(:flickr) do
 end
 
 Smoke.data(:twitter) do
-  url "http://twitter.com/users/show.json?screen_name=benschwarz", :format => :json
+  prepare :require => :username do
+    url "http://twitter.com/users/show.json?screen_name=#{username}", :format => :json  
+  end
 end
 
 Smoke.feed(:delicious) do
