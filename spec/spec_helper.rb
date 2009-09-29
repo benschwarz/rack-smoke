@@ -5,7 +5,7 @@ require 'spec'
 require 'spec/autorun'
 require 'rack/test'
 
-gem 'smoke', '>= 0.5.13'
+gem 'smoke', '>= 0.5.16'
 require 'smoke'
 require 'support/source'
 require 'smoke-rack'
