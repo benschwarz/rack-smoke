@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
      "lib/smoke-rack.rb",
      "public/css/base.css",
      "public/css/reset.css",
+     "smoke-rack.gemspec",
      "spec/smoke-rack_spec.rb",
      "spec/spec_helper.rb",
      "spec/support/source.rb",
