@@ -37,4 +37,32 @@ describe "SmokeRack" do
       end
     end
   end
+  
+  describe "source requirements" do
+    describe "with requirements" do
+      before :all do      
+        Smoke.source_requirements.stub!(:output).and_return([])
+      end
+    
+      it "should allow source requirements to hit smoke" do
+        args = {:username => "frank", :sort_by => "date"}
+        Smoke.should_receive(:source_requirements).with(args)
+        get '/smoke/source_requirements.xml', args
+      end
+    
+      it "should not allow through abstract querystrings" do
+        Smoke.should_not_receive(:source_requirements).with({:abstract => "nasty"})
+        get '/smoke/source_requirements.xml', {:abstract => "nasty"}
+      end
+        
+      it "should render a 404 when requirements are not met" do
+        get '/smoke/source_requirements.xml'
+        last_response.should_not be_ok
+      end
+    end
+  end
+  
+  describe "without requirements" do
+    it "should not receive arguments when it cannot accept them (ArgumentError)"
+  end
 end

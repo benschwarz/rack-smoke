@@ -14,3 +14,8 @@ Smoke.data(:github) do
     truncate 5
   end
 end
+
+Smoke.data :source_requirements do
+  prepare :require => [:username, :sort_by] do
+  end
+end
