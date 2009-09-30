@@ -1,4 +1,9 @@
+# Dependencies
 require 'sinatra'
+require 'haml'
+
+# Core ext
+Dir["#{File.join(File.dirname(__FILE__))}/core_ext/*.rb"].each {|f| require f}
 
 module Smoke
   class Rack < Sinatra::Base    
@@ -23,10 +28,17 @@ module Smoke
       
       get "/smoke/#{source.to_s}.:format" do
         format = params[:format].to_sym
-        
         content_type format
+        
+        requirements = Smoke.send(source).requirements
+        Smoke.send(source, params.slice(requirements)) if requirements.any?
+        
         Smoke.send(source).output(format)
       end
+    end
+    
+    not_found do
+      haml :not_found
     end
   end
 end
