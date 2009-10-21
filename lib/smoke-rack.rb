@@ -3,6 +3,7 @@ require 'sinatra'
 module Smoke
   class Rack < Sinatra::Base    
     set :public, File.join(File.dirname(__FILE__), '..', 'public')
+    set :views, File.join(File.dirname(__FILE__), '..', 'views')
     set :haml, {:format => :html5, :attr_wrapper => '"'}
     enable :static
     
