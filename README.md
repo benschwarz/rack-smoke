@@ -20,7 +20,6 @@ Smoke allows you to take single serve sources from around the web. Then it does 
 
 Smoke-rack allows you to transcode that information and provide an API like layer of your own.
 
-
 ## How do I include it in my project? 
 
     # config.ru
@@ -34,6 +33,9 @@ Smoke-rack allows you to transcode that information and provide an API like laye
     
     run Sinatra::Application
 
+## Installation
+
+    gem install smoke-rack -s http://gemcutter.org
 
 ## Note on Patches/Pull Requests
  
