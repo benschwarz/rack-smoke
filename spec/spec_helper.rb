@@ -1,5 +1,7 @@
-$LOAD_PATH.unshift(File.dirname(__FILE__))
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+unless defined? SPEC_DIR 
+  SPEC_DIR = File.join(File.dirname(__FILE__))
+end
+
 require 'rubygems'
 require 'spec'
 require 'spec/autorun'
@@ -7,8 +9,8 @@ require 'rack/test'
 
 gem 'smoke', '>= 0.5.16'
 require 'smoke'
-require 'support/source'
-require 'smoke-rack'
+require "#{SPEC_DIR}/support/source"
+require File.join(File.dirname(__FILE__), '..', 'lib', 'rack', 'smoke')
 
 set :environment, :test
 
