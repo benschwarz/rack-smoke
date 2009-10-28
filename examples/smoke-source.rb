@@ -50,6 +50,8 @@ Smoke.data(:github) do
 end
 
 Smoke.data(:slideshare) do
+  conceal
+  
   prepare do
     timestamp = Time.now.to_i
     hash = Digest::SHA1.hexdigest("FeXBxg0G#{timestamp}")
