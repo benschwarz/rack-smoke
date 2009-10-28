@@ -4,7 +4,7 @@ describe "SmokeRack" do
   include Rack::Test::Methods
 
   def app
-    Smoke::Rack
+    Rack::Smoke
   end
     
   it "renders the index" do
@@ -33,6 +33,11 @@ describe "SmokeRack" do
         it "should serve using the correct content_type" do
           get "/smoke/github.#{format}"
           last_response.content_type.should include(format)
+        end
+        
+        it "should have an etag set" do
+          get "/smoke/github.#{format}"
+          last_response.headers.should have_key("ETag")
         end
       end
     end
