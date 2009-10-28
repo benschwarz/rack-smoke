@@ -13,11 +13,11 @@ module Rack
     mime :yaml, "application/x-yaml"
     
     get "/smoke" do
-      @sources = ::Smoke.active_sources.keys
+      @sources = ::Smoke.exposed_sources.keys
       haml :index
     end
     
-    ::Smoke.active_sources.keys.each do |source|
+    ::Smoke.exposed_sources.keys.each do |source|
       get "/smoke/#{source.to_s}" do
         @source = source
         haml :usage
