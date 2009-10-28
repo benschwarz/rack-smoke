@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{smoke-rack}
-  s.version = "0.0.3"
+  s.version = "0.0.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ben Schwarz"]
-  s.date = %q{2009-10-25}
+  s.date = %q{2009-10-29}
   s.description = %q{Expose Smoke sources and transcode them into JSON, XML or YAML}
   s.email = %q{ben.schwarz@gmail.com}
   s.extra_rdoc_files = [
@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
      "VERSION",
      "config.ru",
      "examples/smoke-source.rb",
+     "lib/rack/smoke.rb",
      "lib/smoke-rack.rb",
      "public/css/base.css",
      "public/css/reset.css",
@@ -55,17 +56,23 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<rspec>, [">= 0"])
-      s.add_runtime_dependency(%q<smoke>, ["= 0.5.16"])
+      s.add_development_dependency(%q<rack-test>, [">= 0"])
+      s.add_runtime_dependency(%q<smoke>, ["= 0.5.17"])
       s.add_runtime_dependency(%q<haml>, [">= 0"])
+      s.add_runtime_dependency(%q<sinatra>, [">= 0"])
     else
       s.add_dependency(%q<rspec>, [">= 0"])
-      s.add_dependency(%q<smoke>, ["= 0.5.16"])
+      s.add_dependency(%q<rack-test>, [">= 0"])
+      s.add_dependency(%q<smoke>, ["= 0.5.17"])
       s.add_dependency(%q<haml>, [">= 0"])
+      s.add_dependency(%q<sinatra>, [">= 0"])
     end
   else
     s.add_dependency(%q<rspec>, [">= 0"])
-    s.add_dependency(%q<smoke>, ["= 0.5.16"])
+    s.add_dependency(%q<rack-test>, [">= 0"])
+    s.add_dependency(%q<smoke>, ["= 0.5.17"])
     s.add_dependency(%q<haml>, [">= 0"])
+    s.add_dependency(%q<sinatra>, [">= 0"])
   end
 end
 
