@@ -2,8 +2,8 @@
 
 # Ensure your sources (and smoke) are required before smoke-rack
 require 'examples/smoke-source'
-require 'lib/smoke-rack'
-use Smoke::Rack
+require 'lib/rack/smoke'
+use Rack::Smoke
 
 run Sinatra::Application
 get '/' do

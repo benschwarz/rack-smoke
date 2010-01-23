@@ -5,17 +5,17 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "smoke-rack"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Expose Smoke sources and transcode them into JSON, XML or YAML}
+    gem.description = %Q{Expose Smoke sources and transcode them into JSON, XML or YAML}
     gem.email = "ben.schwarz@gmail.com"
     gem.homepage = "http://github.com/benschwarz/smoke-rack"
     gem.authors = ["Ben Schwarz"]
     gem.rubyforge_project = "smoke-rack"
     gem.add_development_dependency "rack-test"
     gem.add_development_dependency "rspec"
-    gem.add_dependency "smoke", "0.5.16"
-    gem.add_dependency "sinatra"
+    gem.add_dependency "smoke", "0.5.17"
     gem.add_dependency "haml"
+    gem.add_dependency "sinatra"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
