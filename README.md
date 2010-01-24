@@ -8,7 +8,7 @@ Rack::Smoke allows you to expose Smoke sources and transcode them into JSON, XML
 * Join Smoke sources together, reinterpret them, then offer them as a simple web service 
 
 Rack::Smoke gives you a bunch of HTML screens (found at `/smoke`) that outline the Smoke sources that are found within your current environment.
-![Smoke-rack home screen](http://farm3.static.flickr.com/2627/3964835379_5d245a98e2.jpg)
+![Rack::Smoke home screen](http://farm3.static.flickr.com/2627/3964835379_5d245a98e2.jpg)
 
 From there, you'll be able to see the formats that you can get the stream in, or if they require any additional query strings.
 ![Twitter source details](http://farm3.static.flickr.com/2566/3964835179_f543c25681.jpg)
@@ -33,6 +33,8 @@ Smoke-rack allows you to transcode that information and provide an API like laye
     
     run Sinatra::Application
 
+Then navigate to localhost:PORT/smoke to get a list of available sources
+
 ## Installation
 
     gem install rack-smoke
@@ -50,4 +52,4 @@ Smoke-rack allows you to transcode that information and provide an API like laye
 
 ## Copyright
 
-Copyright (c) 2009 Ben Schwarz. See LICENSE for details.
+Copyright (c) 2010 Ben Schwarz. See LICENSE for details.
