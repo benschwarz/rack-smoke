@@ -15,7 +15,8 @@ Smoke.data(:github) do
   end
 end
 
-Smoke.data :source_requirements do
-  prepare :require => [:username, :sort_by] do
+Smoke.data(:twitter) do
+  prepare :require => :username do
+    url "http://twitter.com/users/show.json?screen_name=#{username}", :format => :json  
   end
 end
