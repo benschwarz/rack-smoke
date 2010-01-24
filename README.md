@@ -8,10 +8,10 @@ Rack::Smoke allows you to expose Smoke sources and transcode them into JSON, XML
 * Join Smoke sources together, reinterpret them, then offer them as a simple web service 
 
 Rack::Smoke gives you a bunch of HTML screens (found at `/smoke`) that outline the Smoke sources that are found within your current environment.
-![Rack::Smoke home screen](http://img.skitch.com/20100124-t55yrg8wij4yah1ebd8a7mfdmq.jpg)
+![Rack::Smoke home screen](http://img.skitch.com/20100124-cknpt8b6sy7scjcrrhpy8rph8c.jpg)
 
 From there, you'll be able to see the formats that you can get the stream in, or if they require any additional query strings.
-![Twitter source details](http://img.skitch.com/20100124-m8gu8nfbknrqgfhb3aax6idnrp.jpg)
+![Twitter source details](http://img.skitch.com/20100124-bpd18ckpnm4uimc3nm6pus7xmt.jpg)
 
 
 ## Smoke? 
