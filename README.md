@@ -1,13 +1,13 @@
-# smoke-rack
+# rack-smoke
 
-Smoke::Rack allows you to expose Smoke sources and transcode them into JSON, XML or YAML.
+Rack::Smoke allows you to expose Smoke sources and transcode them into JSON, XML or YAML.
 
 ## What are the benefits? 
 
 * Pluggable caching, cache remote web services and rely on your own infrastructure
 * Join Smoke sources together, reinterpret them, then offer them as a simple web service 
 
-Smoke::Rack gives you a bunch of HTML screens (found at `/smoke`) that outline the Smoke sources that are found within your current environment.
+Rack::Smoke gives you a bunch of HTML screens (found at `/smoke`) that outline the Smoke sources that are found within your current environment.
 ![Smoke-rack home screen](http://farm3.static.flickr.com/2627/3964835379_5d245a98e2.jpg)
 
 From there, you'll be able to see the formats that you can get the stream in, or if they require any additional query strings.
@@ -29,13 +29,13 @@ Smoke-rack allows you to transcode that information and provide an API like laye
     require 'your-app'
     
     require 'smoke-rack'
-    use Smoke::Rack
+    use Rack::Smoke
     
     run Sinatra::Application
 
 ## Installation
 
-    gem install smoke-rack -s http://gemcutter.org
+    gem install rack-smoke
 
 ## Note on Patches/Pull Requests
  
