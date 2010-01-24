@@ -17,13 +17,7 @@ module Rack
       haml :index
     end
     
-    get "/smoke/:source" do 
-      raise Sinatra::NotFound if ::Smoke[params["source"].to_sym].nil?
-      @source = ::Smoke[params["source"].to_sym]
-      haml :usage
-    end
-    
-    get "/smoke/:source/:format" do
+    get "/smoke/:source.:format" do
       raise Sinatra::NotFound if ::Smoke[params["source"].to_sym].nil?
 
       format = params.delete("format").to_sym
@@ -37,6 +31,12 @@ module Rack
       rescue ::Smoke::Origin::UnavailableFormat, NameError  # Requirements not met for source
         status 400
       end
+    end
+    
+    get "/smoke/:source" do 
+      raise Sinatra::NotFound if ::Smoke[params["source"].to_sym].nil?
+      @source = ::Smoke[params["source"].to_sym]
+      haml :usage
     end
   end
 end

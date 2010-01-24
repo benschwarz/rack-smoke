@@ -1,22 +1,22 @@
 %header
   %a.back{:href => "/smoke"} &laquo; Back to docs
-  %h1= @source
+  %h1= @source.name
   %h2 Try these neat examples in your console
 
 - %w(json yaml xml).each do |format|
   %h2= "In #{format.upcase}"
   %pre
-    %code= "curl -i http://#{env["HTTP_HOST"]}/smoke/#{@source}.#{format}"
-- if Smoke.send(@source).requirements.any? 
+    %code= "curl -i http://#{env["HTTP_HOST"]}/smoke/#{@source.name}.#{format}"
+- if @source.requirements.any? 
   %h2 Requirements
   %p 
     You must set these properties before calling
     %code output.
     This can be done by adding query strings to your get requests.
-  - Smoke.send(@source).requirements.each do |requirement|
+  - @source.requirements.each do |requirement|
     %li
       = requirement.to_s
       %pre
-        %code= "http://#{env["HTTP_HOST"]}/smoke/#{@source}.(json|yaml|xml)?#{requirement}=string"
+        %code= "http://#{env["HTTP_HOST"]}/smoke/#{@source.name}.(json|yaml|xml)?#{requirement}=string"
   
   
