@@ -7,8 +7,9 @@ require 'spec'
 require 'spec/autorun'
 require 'rack/test'
 
-gem 'smoke', '>= 0.5.16'
 require 'smoke'
+
+# The source must be required before rack-smoke
 require "#{SPEC_DIR}/support/source"
 require File.join(File.dirname(__FILE__), '..', 'lib', 'rack', 'smoke')
 
