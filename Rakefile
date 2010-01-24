@@ -4,13 +4,13 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "smoke-rack"
+    gem.name = "rack-smoke"
     gem.summary = %Q{Expose Smoke sources and transcode them into JSON, XML or YAML}
     gem.description = %Q{Expose Smoke sources and transcode them into JSON, XML or YAML}
     gem.email = "ben.schwarz@gmail.com"
-    gem.homepage = "http://github.com/benschwarz/smoke-rack"
+    gem.homepage = "http://github.com/benschwarz/rack-smoke"
     gem.authors = ["Ben Schwarz"]
-    gem.rubyforge_project = "smoke-rack"
+    gem.rubyforge_project = "rack-smoke"
     gem.add_development_dependency "rack-test"
     gem.add_development_dependency "rspec"
     gem.add_dependency "smoke", ">= 0.5.19"
@@ -51,7 +51,7 @@ Rake::RDocTask.new do |rdoc|
   end
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "smoke-rack #{version}"
+  rdoc.title = "rack-smoke #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

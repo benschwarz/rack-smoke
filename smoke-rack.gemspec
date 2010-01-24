@@ -4,7 +4,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{smoke-rack}
+  s.name = %q{rack-smoke}
   s.version = "0.0.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
@@ -26,25 +26,25 @@ Gem::Specification.new do |s|
      "config.ru",
      "examples/smoke-source.rb",
      "lib/rack/smoke.rb",
-     "lib/smoke-rack.rb",
+     "lib/rack-smoke.rb",
      "public/css/base.css",
      "public/css/reset.css",
-     "smoke-rack.gemspec",
-     "spec/smoke-rack_spec.rb",
+     "rack-smoke.gemspec",
+     "spec/rack-smoke_spec.rb",
      "spec/spec_helper.rb",
      "spec/support/source.rb",
      "views/index.haml",
      "views/layout.haml",
      "views/usage.haml"
   ]
-  s.homepage = %q{http://github.com/benschwarz/smoke-rack}
+  s.homepage = %q{http://github.com/benschwarz/rack-smoke}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubyforge_project = %q{smoke-rack}
+  s.rubyforge_project = %q{rack-smoke}
   s.rubygems_version = %q{1.3.5}
   s.summary = %q{Expose Smoke sources and transcode them into JSON, XML or YAML}
   s.test_files = [
-    "spec/smoke-rack_spec.rb",
+    "spec/rack-smoke_spec.rb",
      "spec/spec_helper.rb",
      "spec/support/source.rb",
      "examples/smoke-source.rb"
