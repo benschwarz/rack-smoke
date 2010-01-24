@@ -13,7 +13,7 @@ begin
     gem.rubyforge_project = "smoke-rack"
     gem.add_development_dependency "rack-test"
     gem.add_development_dependency "rspec"
-    gem.add_dependency "smoke", "0.5.17"
+    gem.add_dependency "smoke", ">= 0.5.19"
     gem.add_dependency "haml"
     gem.add_dependency "sinatra"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
